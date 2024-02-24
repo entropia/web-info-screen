@@ -1,0 +1,16 @@
+html {
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-brand-primary: #ea5b0c;
+  --color-brand-secondary: #666666;
+  --color-main-background: #ffffff;
+  --color-main-text: #333333;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --color-main-background: #222222;
+    --color-main-text: #f6f6f6;
+  }
+}
