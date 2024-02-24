@@ -6,6 +6,8 @@ html {
   --color-brand-secondary: #666666;
   --color-main-background: #ffffff;
   --color-main-text: #333333;
+
+  --font-family: 'Inter', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {

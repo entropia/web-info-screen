@@ -3,6 +3,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  font-family: var(--font-family);
   color: var(--color-main-text);
   background-color: var(--color-main-background);
 }
