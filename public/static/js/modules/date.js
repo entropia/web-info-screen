@@ -1,6 +1,9 @@
 export default class DateModule {
   constructor() {
     this.domElement = document.querySelector('.date');
+
+    setInterval(() => this.update(), 1000);
+    this.update();
   }
 
   update() {
