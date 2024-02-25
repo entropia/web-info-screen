@@ -9,10 +9,3 @@ html {
 
   --font-family: 'Inter', sans-serif;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    --color-main-background: #222222;
-    --color-main-text: #f6f6f6;
-  }
-}
