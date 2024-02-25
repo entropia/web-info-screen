@@ -1,10 +1,10 @@
 @import url('variables.css');
-@import url('modules/reset.css');
-@import url('modules/layout.css');
+@import url('layout/reset.css');
+@import url('layout/page.css');
+@import url('layout/fontfaces.css');
 @import url('modules/time.css');
 @import url('modules/date.css');
 @import url('modules/entropialeaks.css');
 @import url('modules/events.css');
 @import url('modules/weather.css');
 @import url('modules/tram-departure.css');
-@import url('modules/fontfaces.css');
