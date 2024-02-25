@@ -1,4 +1,10 @@
 .time {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 24px 36px;
   font-size: 48px;
   color: var(--color-white);
   background-color: var(--color-brand-primary);
