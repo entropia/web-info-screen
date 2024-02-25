@@ -15,6 +15,6 @@ export default class TimeModule {
       second: undefined,
     };
 
-    this.domElement.innerHTML = `<span>${now.toLocaleTimeString('de-DE', options)}</span>`;
+    this.domElement.innerHTML = `<span>${now.toLocaleTimeString('de-DE', options)} Uhr</span>`;
   }
 }
