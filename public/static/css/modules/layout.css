@@ -7,3 +7,9 @@ body {
   color: var(--color-main-text);
   background-color: var(--color-main-background);
 }
+
+body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: 90px repeat(2, minmax(0, 1fr));
+}
