@@ -1,6 +1,9 @@
 export default class TimeModule {
   constructor() {
     this.domElement = document.querySelector('.time');
+
+    setInterval(() => this.update(), 1000);
+    this.update();
   }
 
   update() {
