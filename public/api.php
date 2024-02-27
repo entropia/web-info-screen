@@ -1,5 +1,10 @@
 <?php
 
+include_once __DIR__ . '/../modules/entropialeaks.php';
+include_once __DIR__ . '/../modules/events.php';
+include_once __DIR__ . '/../modules/tram-departure.php';
+include_once __DIR__ . '/../modules/weather.php';
+
 class Api
 {
     public function __construct()
