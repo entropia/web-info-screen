@@ -18,7 +18,7 @@ class Api
         echo json_encode($response, JSON_FORCE_OBJECT);
     }
 
-    protected static function callModule(array $request_parameters)
+    protected static function callModule(array $request_parameters): array
     {
         switch ($request_parameters['module']) {
             case 'eantropialeaks':
