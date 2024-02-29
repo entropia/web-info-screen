@@ -18,6 +18,19 @@ export default class TramDepartureModule {
     this.stopCounter = -1;
   }
 
+  async fetchData() {
+    const stop = this.cycleStops();
+
+    const parameters = {
+      'module': 'tram-departure',
+      'stop-id': stop.id,
+    };
+
+    const response = await fetch(`api.php?${new URLSearchParams(parameters)}`);
+
+    return response.json();
+  }
+
   cycleStops() {
     if (this.stopCounter >= this.stops.length) {
       this.stopCounter = -1;
