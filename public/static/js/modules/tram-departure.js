@@ -16,6 +16,13 @@ export default class TramDepartureModule {
       }
     ];
     this.stopCounter = -1;
+
+    setInterval(() => this.update(), 15000);
+    this.update();
+  }
+
+  update() {
+    this.fetchData();
   }
 
   async fetchData() {
