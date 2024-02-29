@@ -15,5 +15,14 @@ export default class TramDepartureModule {
         'id':   '7000085'
       }
     ];
+    this.stopCounter = -1;
+  }
+
+  cycleStops() {
+    if (this.stopCounter >= this.stops.length) {
+      this.stopCounter = -1;
+    }
+
+    return this.stops[(++this.stopCounter % this.stops.length)];
   }
 }
