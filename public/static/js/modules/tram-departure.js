@@ -34,6 +34,7 @@ export default class TramDepartureModule {
           const line = document.createElement('span');
           line.classList.add('line');
           line.innerText = departure?.servingLine?.symbol;
+          line.setAttribute('data-line', departure?.servingLine?.symbol);
 
           const direction = document.createElement('span');
           direction.classList.add('direction');
