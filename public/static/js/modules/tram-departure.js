@@ -30,6 +30,28 @@ export default class TramDepartureModule {
         const list = document.createElement('ul');
         list.classList.add('timetable');
 
+        Object.values(response?.departureList)?.forEach((departure) => {
+          const line = document.createElement('span');
+          line.innerText = departure?.servingLine?.symbol;
+
+          const direction = document.createElement('span');
+          direction.innerText = departure?.servingLine?.direction;
+
+          const departureTime = document.createElement('span');
+          departureTime.innerText = `in ${this.calculateMinutesUntilDepartureTime(departure?.dateTime)} min`;
+
+          const platform = document.createElement('span');
+          platform.innerText = departure?.platformName;
+
+          const listEntry = document.createElement('li');
+          listEntry.appendChild(line);
+          listEntry.appendChild(direction);
+          listEntry.appendChild(departureTime);
+          listEntry.appendChild(platform);
+
+          list.appendChild(listEntry);
+        });
+
         this.domElement.replaceChildren(stopNameHeadline, list);
       });
   }
