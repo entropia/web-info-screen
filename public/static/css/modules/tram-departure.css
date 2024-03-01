@@ -18,6 +18,18 @@
   background-color: var(--color-white);
 }
 
+.tram-departure ul {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  grid-template-rows: auto;
+  align-items: center;
+  gap: 18px 24px;
+}
+
+.tram-departure ul li {
+  display: contents;
+}
+
 .tram-departure .line[data-line='1'] {
   color: var(--color-white);
   background-color: var(--line-background-color-1);
