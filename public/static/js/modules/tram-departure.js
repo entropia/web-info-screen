@@ -54,4 +54,11 @@ export default class TramDepartureModule {
 
     return this.stops[(++this.stopCounter % this.stops.length)];
   }
+
+  calculateMinutesUntilDepartureTime(dateTime) {
+    const now = new Date();
+    const departureTime = new Date(dateTime.year, (dateTime.month - 1), dateTime.day, dateTime.hour, dateTime.minute, 0, 0);
+
+    return Math.ceil((departureTime - now) / 60 / 1000);
+  }
 }
