@@ -32,15 +32,19 @@ export default class TramDepartureModule {
 
         Object.values(response?.departureList)?.forEach((departure) => {
           const line = document.createElement('span');
+          line.classList.add('line');
           line.innerText = departure?.servingLine?.symbol;
 
           const direction = document.createElement('span');
+          direction.classList.add('direction');
           direction.innerText = departure?.servingLine?.direction;
 
           const departureTime = document.createElement('span');
+          departureTime.classList.add('departure-time');
           departureTime.innerText = `in ${this.calculateMinutesUntilDepartureTime(departure?.dateTime)} min`;
 
           const platform = document.createElement('span');
+          platform.classList.add('platform');
           platform.innerText = departure?.platformName;
 
           const listEntry = document.createElement('li');
