@@ -22,7 +22,13 @@ export default class TramDepartureModule {
   }
 
   update() {
-    this.fetchData();
+    this.fetchData()
+      .then((response) => {
+        const stopNameHeadline = document.createElement('h2');
+        stopNameHeadline.innerText = this.stops[this.stopCounter].name;
+
+        this.domElement.replaceChildren(stopNameHeadline);
+      });
   }
 
   async fetchData() {
