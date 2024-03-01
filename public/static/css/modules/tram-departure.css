@@ -1,3 +1,19 @@
 .tram-departure {
+  --line-background-color-1: #ed1c24;
+  --line-background-color-2: #3a89c9;
+  --line-background-color-3: #947139;
+  --line-background-color-4: #ffcb04;
+  --line-background-color-5: #00c0f3;
+  --line-background-color-S1: #1cb78d;
+  --line-background-color-S11: #1cb78d;
+  --line-background-color-S12: #1cb78d;
+  --line-background-color-S2: #b286bc;
+  --line-background-color-S4: #ae4a63;
+  --line-background-color-S5: #f8b0ac;
+  --line-background-color-S51: #f8b0ac;
+  --line-background-color-S52: #f8b0ac;
+  --line-background-color-S7: #fff460;
+  --line-background-color-S8: #6e692a;
+
   background-color: var(--color-white);
 }
