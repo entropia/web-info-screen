@@ -30,6 +30,13 @@
   display: contents;
 }
 
+.tram-departure .line {
+  justify-self: center;
+  padding: 4px 8px;
+  border-radius: 8px;
+  text-align: center;
+}
+
 .tram-departure .line[data-line='1'] {
   color: var(--color-white);
   background-color: var(--line-background-color-1);
