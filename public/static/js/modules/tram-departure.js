@@ -47,7 +47,7 @@ export default class TramDepartureModule {
             departureTime.innerText = `in ${this.calculateMinutesUntilDepartureTime(departure?.realDateTime)} min`;
           }
           else if (departure.dateTime) {
-          departureTime.innerText = `in ${this.calculateMinutesUntilDepartureTime(departure?.dateTime)} min`;
+            departureTime.innerText = `in ${this.calculateMinutesUntilDepartureTime(departure?.dateTime)} min`;
           }
 
           const platform = document.createElement('span');
