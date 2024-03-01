@@ -17,3 +17,78 @@
 
   background-color: var(--color-white);
 }
+
+.tram-departure .line[data-line='1'] {
+  color: var(--color-white);
+  background-color: var(--line-background-color-1);
+}
+
+.tram-departure .line[data-line='2'] {
+  color: var(--color-white);
+  background-color: var(--line-background-color-2);
+}
+
+.tram-departure .line[data-line='3'] {
+  color: var(--color-white);
+  background-color: var(--line-background-color-3);
+}
+
+.tram-departure .line[data-line='4'] {
+  color: var(--color-black);
+  background-color: var(--line-background-color-4);
+}
+
+.tram-departure .line[data-line='5'] {
+  color: var(--color-white);
+  background-color: var(--line-background-color-5);
+}
+
+.tram-departure .line[data-line='S1'] {
+  color: var(--color-white);
+  background-color: var(--line-background-color-S1);
+}
+
+.tram-departure .line[data-line='S11'] {
+  color: var(--color-white);
+  background-color: var(--line-background-color-S11);
+}
+
+.tram-departure .line[data-line='S12'] {
+  color: var(--color-white);
+  background-color: var(--line-background-color-S12);
+}
+
+.tram-departure .line[data-line='S2'] {
+  color: var(--color-white);
+  background-color: var(--line-background-color-S2);
+}
+
+.tram-departure .line[data-line='S4'] {
+  color: var(--color-white);
+  background-color: var(--line-background-color-S4);
+}
+
+.tram-departure .line[data-line='S5'] {
+  color: var(--color-black);
+  background-color: var(--line-background-color-S5);
+}
+
+.tram-departure .line[data-line='S51'] {
+  color: var(--color-black);
+  background-color: var(--line-background-color-S51);
+}
+
+.tram-departure .line[data-line='S52'] {
+  color: var(--color-black);
+  background-color: var(--line-background-color-S52);
+}
+
+.tram-departure .line[data-line='S7'] {
+  color: var(--color-black);
+  background-color: var(--line-background-color-S7);
+}
+
+.tram-departure .line[data-line='S8'] {
+  color: var(--color-white);
+  background-color: var(--line-background-color-S8);
+}
