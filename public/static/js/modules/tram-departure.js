@@ -27,7 +27,10 @@ export default class TramDepartureModule {
         const stopNameHeadline = document.createElement('h2');
         stopNameHeadline.innerText = this.stops[this.stopCounter].name;
 
-        this.domElement.replaceChildren(stopNameHeadline);
+        const list = document.createElement('ul');
+        list.classList.add('timetable');
+
+        this.domElement.replaceChildren(stopNameHeadline, list);
       });
   }
 
