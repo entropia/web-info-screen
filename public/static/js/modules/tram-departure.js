@@ -30,7 +30,7 @@ export default class TramDepartureModule {
         const list = document.createElement('ul');
         list.classList.add('timetable');
 
-        Object.values(response?.departureList)?.forEach((departure) => {
+        Object.values(response?.departureList)?.slice(0, 10).forEach((departure) => {
           const line = document.createElement('span');
           line.classList.add('line');
           line.innerText = departure?.servingLine?.symbol;
