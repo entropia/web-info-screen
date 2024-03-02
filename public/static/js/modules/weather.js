@@ -26,6 +26,14 @@ export default class WeatherModule {
           listEntries.push(listEntry);
         });
 
+        Object.values(response?.hourly?.weather_code)?.forEach((weatherCodeValue, index) => {
+          const weatherCode = document.createElement('span');
+          weatherCode.classList.add('weather-code');
+          weatherCode.innerText = WeatherModule.weatherCodes[weatherCodeValue];
+
+          listEntries[index].appendChild(weatherCode);
+        });
+
         Object.values(response?.hourly?.temperature_2m)?.forEach((temperatureValue, index) => {
           const temperature = document.createElement('span');
           temperature.classList.add('temperature');
