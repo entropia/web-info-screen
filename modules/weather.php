@@ -10,6 +10,10 @@ class WeatherModule
 
     public function requestData(array $request_parameters): array
     {
+        $latitude = $request_parameters['latitude'];
+        $longitude = $request_parameters['longitude'];
+        $timezone = $request_parameters['timezone'];
+
         return [];
     }
 }
