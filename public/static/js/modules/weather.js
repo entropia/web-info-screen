@@ -7,7 +7,13 @@ export default class WeatherModule {
   }
 
   update() {
-    this.fetchData();
+    this.fetchData()
+      .then(() => {
+        const weatherHeadline = document.createElement('h2');
+        weatherHeadline.innerText = 'Wetter';
+
+        this.domElement.replaceChildren(weatherHeadline);
+      });
   }
 
   async fetchData() {
