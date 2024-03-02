@@ -25,7 +25,7 @@ export default class TramDepartureModule {
     this.fetchData()
       .then((response) => {
         const stopNameHeadline = document.createElement('h2');
-        stopNameHeadline.innerText = this.stops[this.stopCounter].name;
+        stopNameHeadline.innerText = this.stops[(this.stopCounter % this.stops.length)].name;
 
         const list = document.createElement('ul');
         list.classList.add('timetable');
