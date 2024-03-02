@@ -18,6 +18,11 @@ export default class WeatherModule {
         Object.values(response?.hourly?.time)?.forEach((hourValue) => {
           const listEntry = document.createElement('li');
 
+          const hour = document.createElement('span');
+          hour.classList.add('hour');
+          hour.innerText = `${(new Date(hourValue)).getHours()} Uhr`;
+
+          listEntry.appendChild(hour);
           listEntries.push(listEntry);
         });
 
