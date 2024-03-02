@@ -8,11 +8,18 @@ class WeatherModule
     const API_GET_PARAMETER_LONGITUDE = '&longitude=';
     const API_GET_PARAMETER_TIMEZONE = '&timezone=';
 
+    protected string $request_uri;
+
     public function requestData(array $request_parameters): array
     {
         $latitude = $request_parameters['latitude'];
         $longitude = $request_parameters['longitude'];
         $timezone = $request_parameters['timezone'];
+
+        $this->request_uri = self::API_URL . self::API_GET_PARAMETERS_FEATURES
+            . self::API_GET_PARAMETER_LATITUDE . $latitude
+            . self::API_GET_PARAMETER_LONGITUDE . $longitude
+            . self::API_GET_PARAMETER_TIMEZONE . $timezone;
 
         return [];
     }
