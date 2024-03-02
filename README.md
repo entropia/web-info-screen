@@ -14,6 +14,11 @@ This repository is nothing more and nothing less than a collection of alternativ
 
 If someone feels motivated and able to migrate parts of this code into the club's existing info-beamer setup or start a whole new project inspired by it, this repository would already have a reason to exist.
 
+## Requirements/Dependencies
+
+* A web server like nginx or Apache
+* PHP >= 8.1 (older versions may also work but have not been tested)
+
 ## Features & Modules
 
 | Data                                                          | Source              |
