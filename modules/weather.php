@@ -8,8 +8,8 @@ class WeatherModule
     const API_GET_PARAMETER_LONGITUDE = '&longitude=';
     const API_GET_PARAMETER_TIMEZONE = '&timezone=';
 
-    public function requestData(array $request_parameters)
+    public function requestData(array $request_parameters): array
     {
-
+        return [];
     }
 }
