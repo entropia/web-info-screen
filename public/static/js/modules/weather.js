@@ -8,12 +8,18 @@ export default class WeatherModule {
 
   update() {
     this.fetchData()
-      .then(() => {
+      .then((response) => {
         const weatherHeadline = document.createElement('h2');
         weatherHeadline.innerText = 'Wetter';
 
         const list = document.createElement('ul');
         const listEntries = [];
+
+        Object.values(response?.hourly?.time)?.forEach((hourValue) => {
+          const listEntry = document.createElement('li');
+
+          listEntries.push(listEntry);
+        });
 
         listEntries.forEach((listEntry) => {
           list.appendChild(listEntry);
