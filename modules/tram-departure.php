@@ -8,11 +8,6 @@ class TramDepartureModule
 
     protected string $request_uri;
 
-    public function __construct()
-    {
-
-    }
-
     public function requestData(array $request_parameters): array
     {
         $stop_id = $request_parameters['stop-id'];
