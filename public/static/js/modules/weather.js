@@ -12,7 +12,14 @@ export default class WeatherModule {
         const weatherHeadline = document.createElement('h2');
         weatherHeadline.innerText = 'Wetter';
 
-        this.domElement.replaceChildren(weatherHeadline);
+        const list = document.createElement('ul');
+        const listEntries = [];
+
+        listEntries.forEach((listEntry) => {
+          list.appendChild(listEntry);
+        });
+
+        this.domElement.replaceChildren(weatherHeadline, list);
       });
   }
 
