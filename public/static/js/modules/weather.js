@@ -1,6 +1,13 @@
 export default class WeatherModule {
   constructor() {
     this.domElement = document.querySelector('.weather');
+
+    setInterval(() => this.update(), 60000);
+    this.update();
+  }
+
+  update() {
+    this.fetchData();
   }
 
   async fetchData() {
