@@ -14,6 +14,8 @@
   --line-background-color-S52: #f8b0ac;
   --line-background-color-S7: #fff460;
   --line-background-color-S8: #6e692a;
+  --line-background-color-NL1: #ed1c24;
+  --line-background-color-NL2: #3a89c9;
 
   background-color: var(--color-white);
 }
@@ -110,4 +112,14 @@
 .tram-departure .line[data-line='S8'] {
   color: var(--color-white);
   background-color: var(--line-background-color-S8);
+}
+
+.tram-departure .line[data-line='NL1'] {
+  color: var(--color-white);
+  background-color: var(--line-background-color-NL1);
+}
+
+.tram-departure .line[data-line='NL2'] {
+  color: var(--color-white);
+  background-color: var(--line-background-color-NL2);
 }
