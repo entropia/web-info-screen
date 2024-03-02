@@ -28,4 +28,35 @@ export default class WeatherModule {
 
     return response.json();
   }
+
+  static weatherCodes = {
+    '0':  'Klar',
+    '1':  'Leicht bewölkt',
+    '2':  'Teilweise bewölkt',
+    '3':  'Bewölkt',
+    '45': 'Nebel',
+    '48': 'Raureif',
+    '51': 'Leichter Nieselregen',
+    '53': 'Nieselregen',
+    '55': 'Starker Nieselregen',
+    '56': 'Leichter Nieselregen',
+    '57': 'Starker Nieselregen',
+    '61': 'Leichter Regen',
+    '63': 'Regen',
+    '65': 'Starker Regen',
+    '66': 'Leichter Regen',
+    '67': 'Starker Regen',
+    '71': 'Leichter Schnee',
+    '73': 'Schnee',
+    '75': 'Starker Schnee',
+    '77': 'Schnee',
+    '80': 'Schwache Regenschauer',
+    '81': 'Regenschauer',
+    '82': 'Starke Regenschauer',
+    '85': 'Leichte Schneeschauer',
+    '86': 'Starke Schneeschauer',
+    '95': 'Gewitter',
+    '96': 'Sturm mit leichtem Hagel',
+    '99': 'Sturm mit starkem Hagel'
+  };
 }
