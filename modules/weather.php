@@ -21,6 +21,6 @@ class WeatherModule
             . self::API_GET_PARAMETER_LONGITUDE . $longitude
             . self::API_GET_PARAMETER_TIMEZONE . $timezone;
 
-        return [];
+        return json_decode(file_get_contents($this->request_uri), JSON_OBJECT_AS_ARRAY);
     }
 }
