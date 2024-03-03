@@ -40,3 +40,7 @@ Or even better: Automate these steps, for example with a script that is executed
 | Upcoming events                                               | Entropia Wiki table |
 | Weather forecast for the next couple of hours                 | OpenMeteo           |
 | Tram departure from multiple relevant stops close to the club | KVV EFA             |
+
+## Live Demo
+
+A live demo on a public web server will be available soon.
