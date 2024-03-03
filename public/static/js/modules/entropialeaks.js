@@ -14,7 +14,11 @@ export default class EntropiaLeaksModule {
         entropiaLeaksHeadline.innerText = '#entropialeaks';
 
         Object.values(response)?.forEach((tootValue) => {
+          const tootContent = document.createElement('p');
+          tootContent.innerText = this.stripHtmlTags(tootValue?.content);
+
           const toot = document.createElement('blockquote');
+          toot.appendChild(tootContent);
 
           this.toots.push(toot);
         });
