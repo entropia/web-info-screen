@@ -14,7 +14,7 @@ export default class EntropiaLeaksModule {
   update() {
     this.fetchData()
       .then((response) => {
-        Object.values(response)?.forEach((tootValue) => {
+        Object.values(response)?.reverse()?.forEach((tootValue) => {
           const tootContent = document.createElement('p');
           tootContent.innerText = this.stripHtmlTags(tootValue?.content);
 
@@ -30,7 +30,14 @@ export default class EntropiaLeaksModule {
           toot.appendChild(tootContent);
           toot.appendChild(tootCite);
 
-          this.domElement.appendChild(toot);
+          const firstExistingTootChild = this.domElement.querySelector('blockquote');
+
+          if (!firstExistingTootChild) {
+            this.domElement.appendChild(toot);
+          }
+          else {
+            this.domElement.insertBefore(toot, firstExistingTootChild);
+          }
         });
       });
   }
