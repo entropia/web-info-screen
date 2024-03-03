@@ -1,3 +1,16 @@
 .entropialeaks {
   background-color: var(--color-white);
 }
+
+.entropialeaks blockquote + blockquote {
+  margin-top: 24px;
+}
+
+.entropialeaks blockquote cite {
+  display: block;
+  font-size: .8em;
+}
+
+.entropialeaks blockquote p + cite {
+  margin-top: 6px;
+}
