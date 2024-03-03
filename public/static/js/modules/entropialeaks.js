@@ -14,6 +14,16 @@ export default class EntropiaLeaksModule {
   update() {
     this.fetchData()
       .then((response) => {
+        Array.from(this.domElement.childNodes).reverse().forEach((child) => {
+          if (!child.dataset.id) {
+            return;
+          }
+
+          if (!Array.from(response).some((tootValue) => child.dataset.id === tootValue.id)) {
+            this.domElement.removeChild(child);
+          }
+        });
+
         Object.values(response)?.reverse()?.forEach((tootValue) => {
           if (Array.from(this.domElement.childNodes).some((child) => child.dataset.id === tootValue?.id)) {
             return;
