@@ -1,7 +1,6 @@
 export default class EntropiaLeaksModule {
   constructor() {
     this.domElement = document.querySelector('.entropialeaks');
-    this.toots = [];
 
     const entropiaLeaksHeadline = document.createElement('h2');
     entropiaLeaksHeadline.innerText = '#entropialeaks';
@@ -31,7 +30,7 @@ export default class EntropiaLeaksModule {
           toot.appendChild(tootContent);
           toot.appendChild(tootCite);
 
-          this.toots.push(toot);
+          this.domElement.appendChild(toot);
         });
       });
   }
