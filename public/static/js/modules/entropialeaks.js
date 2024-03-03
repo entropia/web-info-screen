@@ -15,6 +15,10 @@ export default class EntropiaLeaksModule {
     this.fetchData()
       .then((response) => {
         Object.values(response)?.reverse()?.forEach((tootValue) => {
+          if (Array.from(this.domElement.childNodes).some((child) => child.dataset.id === tootValue?.id)) {
+            return;
+          }
+
           const tootContent = document.createElement('p');
           tootContent.innerText = this.stripHtmlTags(tootValue?.content);
 
