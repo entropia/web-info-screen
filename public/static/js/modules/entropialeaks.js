@@ -1,6 +1,13 @@
 export default class EntropiaLeaksModule {
   constructor() {
     this.domElement = document.querySelector('.entropialeaks');
+
+    setInterval(() => this.update(), 60000);
+    this.update();
+  }
+
+  update() {
+    this.fetchData();
   }
 
   async fetchData() {
