@@ -25,6 +25,7 @@ export default class EntropiaLeaksModule {
           }
 
           const toot = document.createElement('blockquote');
+          toot.dataset.id = tootValue?.id;
           toot.appendChild(tootContent);
           toot.appendChild(tootCite);
 
