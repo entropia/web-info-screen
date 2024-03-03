@@ -19,7 +19,7 @@ export default class EntropiaLeaksModule {
             return;
           }
 
-          if (!Array.from(response).some((tootValue) => child.dataset.id === tootValue.id)) {
+          if (!Array.from(response).some((tootValue) => child.dataset.id === tootValue?.id)) {
             this.domElement.removeChild(child);
           }
         });
