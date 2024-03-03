@@ -7,7 +7,13 @@ export default class EntropiaLeaksModule {
   }
 
   update() {
-    this.fetchData();
+    this.fetchData()
+      .then(() => {
+        const entropiaLeaksHeadline = document.createElement('h2');
+        entropiaLeaksHeadline.innerText = '#entropialeaks';
+
+        this.domElement.replaceChildren(entropiaLeaksHeadline);
+      });
   }
 
   async fetchData() {
