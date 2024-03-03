@@ -24,6 +24,23 @@ If someone feels motivated and able to migrate parts of this code into the club'
 1. Clone this repository to any web server fulfilling the requirements listed above
 2. Set the `public` folder as your web root directory
 
+### With Docker
+
+1. Build the container
+```bash
+docker build -t entropia-web-info-screen:latest .
+```
+
+2. Run the container
+
+```bash
+docker run -p 8080:80 entropia-web-info-screen
+```
+If you want to directly mount the files into the container add the following to the run command: `-v ./modules:/var/www/modules/ -v ./public:/var/www/html/`
+
+3. Open any browser and go to `http://localhost:8080`
+
+
 ## Client Setup
 
 1. Start your web browser and navigate to the URL where you made this web application available
