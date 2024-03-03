@@ -17,6 +17,7 @@ body {
 
 body > section {
   padding: 48px 36px;
+  overflow: hidden;
 }
 
 body > section > * + * {
