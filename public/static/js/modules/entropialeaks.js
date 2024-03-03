@@ -17,8 +17,16 @@ export default class EntropiaLeaksModule {
           const tootContent = document.createElement('p');
           tootContent.innerText = this.stripHtmlTags(tootValue?.content);
 
+          const tootCite = document.createElement('cite');
+          tootCite.innerText = tootValue?.account?.acct;
+
+          if (!tootCite.innerText.includes('@')) {
+            tootCite.innerText += '@chaos.social';
+          }
+
           const toot = document.createElement('blockquote');
           toot.appendChild(tootContent);
+          toot.appendChild(tootCite);
 
           this.toots.push(toot);
         });
