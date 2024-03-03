@@ -21,7 +21,7 @@ class Api
     protected static function callModule(array $request_parameters): array
     {
         switch ($request_parameters['module']) {
-            case 'eantropialeaks':
+            case 'entropialeaks':
                 $response = (new EntropiaLeaksModule())->requestData($request_parameters);
                 break;
 
