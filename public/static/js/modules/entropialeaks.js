@@ -13,6 +13,8 @@ export default class EntropiaLeaksModule {
         const entropiaLeaksHeadline = document.createElement('h2');
         entropiaLeaksHeadline.innerText = '#entropialeaks';
 
+        this.domElement.replaceChildren(entropiaLeaksHeadline);
+
         Object.values(response)?.forEach((tootValue) => {
           const tootContent = document.createElement('p');
           tootContent.innerText = this.stripHtmlTags(tootValue?.content);
@@ -31,8 +33,6 @@ export default class EntropiaLeaksModule {
 
           this.toots.push(toot);
         });
-
-        this.domElement.replaceChildren(entropiaLeaksHeadline);
       });
   }
 
