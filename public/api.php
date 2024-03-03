@@ -22,19 +22,19 @@ class Api
     {
         switch ($request_parameters['module']) {
             case 'eantropialeaks':
-                $response = (new EntropiaLeaksModule)->requestData($request_parameters);
+                $response = (new EntropiaLeaksModule())->requestData($request_parameters);
                 break;
 
             case 'events':
-                $response = (new EventsModule)->requestData($request_parameters);
+                $response = (new EventsModule())->requestData($request_parameters);
                 break;
 
             case 'tram-departure':
-                $response = (new TramDepartureModule)->requestData($request_parameters);
+                $response = (new TramDepartureModule())->requestData($request_parameters);
                 break;
 
             case 'weather':
-                $response = (new WeatherModule)->requestData($request_parameters);
+                $response = (new WeatherModule())->requestData($request_parameters);
                 break;
         }
 
