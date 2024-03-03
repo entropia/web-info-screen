@@ -19,6 +19,11 @@ If someone feels motivated and able to migrate parts of this code into the club'
 * A web server like nginx or Apache
 * PHP >= 8.1 (older versions may also work but have not been tested)
 
+## Server Setup
+
+1. Clone this repository to any web server fulfilling the requirements listed above
+2. Set the `public` folder as your web root directory
+
 ## Features & Modules
 
 | Data                                                          | Source              |
