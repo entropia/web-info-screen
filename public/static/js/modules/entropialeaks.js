@@ -3,6 +3,11 @@ export default class EntropiaLeaksModule {
     this.domElement = document.querySelector('.entropialeaks');
     this.toots = [];
 
+    const entropiaLeaksHeadline = document.createElement('h2');
+    entropiaLeaksHeadline.innerText = '#entropialeaks';
+
+    this.domElement.replaceChildren(entropiaLeaksHeadline);
+
     setInterval(() => this.update(), 60000);
     this.update();
   }
@@ -10,11 +15,6 @@ export default class EntropiaLeaksModule {
   update() {
     this.fetchData()
       .then((response) => {
-        const entropiaLeaksHeadline = document.createElement('h2');
-        entropiaLeaksHeadline.innerText = '#entropialeaks';
-
-        this.domElement.replaceChildren(entropiaLeaksHeadline);
-
         Object.values(response)?.forEach((tootValue) => {
           const tootContent = document.createElement('p');
           tootContent.innerText = this.stripHtmlTags(tootValue?.content);
