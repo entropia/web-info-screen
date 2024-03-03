@@ -26,4 +26,11 @@ export default class EntropiaLeaksModule {
 
     return response.json();
   }
+
+  stripHtmlTags(string) {
+    const fakeHtmlTag = document.createElement('p');
+    fakeHtmlTag.innerHTML = string;
+
+    return fakeHtmlTag.textContent ?? fakeHtmlTag.innerText ?? '';
+  }
 }
