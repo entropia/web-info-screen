@@ -4,7 +4,7 @@ A web-based alternative to https://github.com/entropia/entropia-info-beamer
 
 ## Motivation & Context
 
-For as long as I can remember, the Entropia club has had monitors with a very old version of info-beamer. Over time, some modules like the tram departure display stopped working due to no longer exisiting data sources. Other modules like the event list would need a general overhaul to look pretty again. The entire setup and the displayed content are also adapted to the 1280x1024 resolution of the monitors, making it hard to replace them by larger screens.
+For as long as I can remember, the Entropia club has had monitors with a very old version of info-beamer. Over time, some modules like the tram departure display stopped working due to no longer existing data sources. Other modules like the event list would need a general overhaul to look pretty again. The entire setup and the displayed content are also adapted to the 1280x1024 resolution of the monitors, making it hard to replace them by larger screens.
 
 Various plans for further development and improvement of the old setup have not yet led to any visible results. The initiator of this code repository has therefore started a completely new development of an exemplary, web-based infoscreen as it could be implemented nowadays.
 
