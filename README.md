@@ -24,6 +24,13 @@ If someone feels motivated and able to migrate parts of this code into the club'
 1. Clone this repository to any web server fulfilling the requirements listed above
 2. Set the `public` folder as your web root directory
 
+## Client Setup
+
+1. Start your web browser and navigate to the URL where you made this web application available
+2. Enter full screen to hide any controls or different content on your screen
+
+Or even better: Automate these steps, for example with a script that is executed when your device has started, or with solutions such as the kiosk mode of Chromium or Firefox.
+
 ## Features & Modules
 
 | Data                                                          | Source              |
