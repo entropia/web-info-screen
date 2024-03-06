@@ -30,7 +30,7 @@ export default class TramDepartureModule {
         const list = document.createElement('ul');
         list.classList.add('timetable');
 
-        const departureList = this.filterDepartureList(response?.departureList);
+        const departureList = this.sortAndFilterDepartureList(response?.departureList);
 
         departureList.forEach((departure) => {
           const line = document.createElement('span');
@@ -97,10 +97,11 @@ export default class TramDepartureModule {
     return Math.ceil((departureTime - now) / 60 / 1000);
   }
 
-  filterDepartureList(apiResponseDepartureList) {
+  sortAndFilterDepartureList(apiResponseDepartureList) {
     let departureArray = Object.values(apiResponseDepartureList);
 
     departureArray = departureArray.filter((departure) => this.calculateMinutesUntilDepartureTime(departure?.realDateTime ?? departure?.dateTime) >= 5);
+    departureArray = departureArray.sort((a, b) => (a?.realDateTime ?? a?.dateTime) < (b?.realDateTime ?? b.dateTime));
 
     return departureArray;
   }
