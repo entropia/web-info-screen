@@ -30,7 +30,9 @@ export default class TramDepartureModule {
         const list = document.createElement('ul');
         list.classList.add('timetable');
 
-        Object.values(response?.departureList)?.forEach((departure) => {
+        const departureList = this.filterDepartureList(response?.departureList);
+
+        departureList.forEach((departure) => {
           const line = document.createElement('span');
           line.classList.add('line');
           line.innerText = departure?.servingLine?.symbol;
@@ -93,5 +95,13 @@ export default class TramDepartureModule {
     const departureTime = new Date(dateTime.year, (dateTime.month - 1), dateTime.day, dateTime.hour, dateTime.minute, 0, 0);
 
     return Math.ceil((departureTime - now) / 60 / 1000);
+  }
+
+  filterDepartureList(apiResponseDepartureList) {
+    let departureArray = Object.values(apiResponseDepartureList);
+
+    departureArray = departureArray.filter((departure) => this.calculateMinutesUntilDepartureTime(departure?.realDateTime ?? departure?.dateTime) >= 5);
+
+    return departureArray;
   }
 }
