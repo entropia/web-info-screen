@@ -1,21 +1,13 @@
 export default class DateModule {
-  constructor() {
-    this.domElement = document.querySelector('.date');
-
-    setInterval(() => this.update(), 1000);
+  constructor(config) {
+    this.config = config
+    this.domElement = document.querySelector(this.config.querySelector);
+    setInterval(() => this.update(), this.config.updateInterval);
     this.update();
   }
 
   update() {
     const today = new Date();
-
-    const options = {
-      weekday: 'long',
-      day: 'numeric',
-      month: 'long',
-      year: undefined,
-    };
-
-    this.domElement.innerHTML = `<span>${today.toLocaleDateString('de-DE', options)}</span>`;
+    this.domElement.innerHTML = `<span>${today.toLocaleDateString('de-DE', this.config.dateStringOptions)}</span>`;
   }
 }

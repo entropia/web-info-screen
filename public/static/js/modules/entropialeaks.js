@@ -1,13 +1,13 @@
 export default class EntropiaLeaksModule {
-  constructor() {
-    this.domElement = document.querySelector('.entropialeaks');
+  constructor(config) {
+    this.config = config;
+    this.domElement = document.querySelector(this.config.querySelector);
 
-    const entropiaLeaksHeadline = document.createElement('h2');
-    entropiaLeaksHeadline.innerText = '#entropialeaks';
+    const headline = document.createElement('h2');
+    headline.innerText = '#' + this.config.apiParameters.hashtag;
+    this.domElement.replaceChildren(headline);
 
-    this.domElement.replaceChildren(entropiaLeaksHeadline);
-
-    setInterval(() => this.update(), 60000);
+    setInterval(() => this.update(), this.config.updateInterval);
     this.update();
   }
 
@@ -57,13 +57,7 @@ export default class EntropiaLeaksModule {
   }
 
   async fetchData() {
-    const parameters = {
-      'module': 'entropialeaks',
-      'hashtag': 'entropialeaks'
-    };
-
-    const response = await fetch(`api.php?${new URLSearchParams(parameters)}`);
-
+    const response = await fetch(`api.php?${new URLSearchParams(this.config.apiParameters)}`);
     return response.json();
   }
 

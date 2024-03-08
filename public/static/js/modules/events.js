@@ -1,5 +1,6 @@
 export default class EventsModule {
-  constructor() {
-    this.domElement = document.querySelector('.events');
+  constructor(config) {
+    this.config = config;
+    this.domElement = document.querySelector(this.config.querySelector);
   }
 }
