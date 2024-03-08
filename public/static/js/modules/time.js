@@ -1,20 +1,13 @@
 export default class TimeModule {
-  constructor() {
-    this.domElement = document.querySelector('.time');
-
-    setInterval(() => this.update(), 1000);
+  constructor(config) {
+    this.config = config
+    this.domElement = document.querySelector(this.config.querySelector);
+    setInterval(() => this.update(), this.config.updateInterval);
     this.update();
   }
 
   update() {
     const now = new Date();
-
-    const options = {
-      hour: 'numeric',
-      minute: 'numeric',
-      second: undefined,
-    };
-
-    this.domElement.innerHTML = `<span>${now.toLocaleTimeString('de-DE', options)} Uhr</span>`;
+    this.domElement.innerHTML = `<span>${now.toLocaleTimeString('de-DE', this.config.timeStringOptions)} Uhr</span>`;
   }
 }

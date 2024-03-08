@@ -1,23 +1,9 @@
 export default class TramDepartureModule {
-  constructor() {
-    this.domElement = document.querySelector('.tram-departure');
-    this.stops = [
-      {
-        'name': 'Kronenplatz',
-        'id':   '7001002'
-      },
-      {
-        'name': 'Marktplatz',
-        'id':   '7001003'
-      },
-      {
-        'name': 'Rüppurrer Tor',
-        'id':   '7000085'
-      }
-    ];
+  constructor(config) {
+    this.config = config;
+    this.domElement = document.querySelector(this.config.querySelector);
     this.stopCounter = -1;
-
-    setInterval(() => this.update(), 15000);
+    setInterval(() => this.update(), this.config.updateInterval);
     this.update();
   }
 
@@ -25,7 +11,7 @@ export default class TramDepartureModule {
     this.fetchData()
       .then((response) => {
         const stopNameHeadline = document.createElement('h2');
-        stopNameHeadline.innerText = this.stops[(this.stopCounter % this.stops.length)].name;
+        stopNameHeadline.innerText = this.config.stops[(this.stopCounter % this.config.stops.length)].name;
 
         const list = document.createElement('ul');
         list.classList.add('timetable');
@@ -83,11 +69,11 @@ export default class TramDepartureModule {
   }
 
   cycleStops() {
-    if (this.stopCounter >= this.stops.length) {
+    if (this.stopCounter >= this.config.stops.length) {
       this.stopCounter = -1;
     }
 
-    return this.stops[(++this.stopCounter % this.stops.length)];
+    return this.config.stops[(++this.stopCounter % this.config.stops.length)];
   }
 
   calculateMinutesUntilDepartureTime(dateTime) {
