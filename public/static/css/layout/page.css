@@ -16,7 +16,7 @@ body {
 }
 
 body > section {
-  padding: 48px 36px;
+  padding: var(--section-padding-vertical) var(--section-padding-horizontal);
   overflow: hidden;
 }
 

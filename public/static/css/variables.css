@@ -11,4 +11,7 @@ html {
 
   --font-size: 24px;
   --font-size-h2: 48px;
+
+  --section-padding-horizontal: 36px;
+  --section-padding-vertical: 48px;
 }
